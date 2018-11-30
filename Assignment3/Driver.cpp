@@ -2,7 +2,9 @@
 #include<iostream>
 using namespace std;
 
-void main()
+int main()
 {
-	cout << "Hello World" << endl;
+	Person p1;
+	p1.set_father_name("Mohammad Ali");
+	cout << p1.get_father_name() << endl;
 }
