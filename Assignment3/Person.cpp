@@ -5,7 +5,7 @@ using namespace std;
 
 Person::Person()
 {
-
+	nationalID = 0;
 	personFirstName = "";
 	personLastName = "";
 	birthDate = "";
@@ -23,9 +23,9 @@ Person::Person()
 }
 
 
-//Person::~Person()
-//{
-//}
+Person::~Person()
+{
+}
 string Person::get_person_first_name()
 {
 	return personFirstName;
@@ -150,5 +150,5 @@ void Person::set_person_age(int age)
 }
 void Person::print_all_fields()
 {
-	cout << "First name: " << personFirstName << endl << "Last name: " << personLastName << endl << "Date of Birth: " << birthDate << endl << "Father's Name: " << fatherName << endl << "Mother's name: " << motherName << endl << "Marital Status: " << maritalStatus << endl << "Spouse name: " << spouseName << endl << "Present Address: " << presentAddress << endl << "Permanent Address: " << permanentAddress << endl << "Height: " << height << endl << "Weight: " << weight << endl << "Hair Color: " << hairColor << endl << "Eye Color: " << eyeColor << endl << "Age: " << age << endl;
+	cout<<"National ID: "<<nationalID<< endl << "First name: " << personFirstName << endl << "Last name: " << personLastName << endl << "Date of Birth: " << birthDate << endl << "Father's Name: " << fatherName << endl << "Mother's name: " << motherName << endl << "Marital Status: " << maritalStatus << endl << "Spouse name: " << spouseName << endl << "Present Address: " << presentAddress << endl << "Permanent Address: " << permanentAddress << endl << "Height: " << height << endl << "Weight: " << weight << endl << "Hair Color: " << hairColor << endl << "Eye Color: " << eyeColor << endl << "Age: " << age << endl;
 }

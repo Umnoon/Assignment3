@@ -1,11 +1,15 @@
-
+#include"Person.h"
 #include"Customer.h"
+#include"Call.h"
 #include<iostream>
 #include<list>
+#include<queue>
 #include<string>
 using namespace std;
+
 struct Phone_Number
 {
+
 	string phoneNumber;
 	string operatorName;
 	Phone_Number() {}
@@ -17,12 +21,34 @@ struct Phone_Number
 };
 int main()
 {
+	priority_queue <pair<int, string>> que;
+	que.push(make_pair(1,"wife"));
+	que.push(make_pair(3,"Father"));
+	que.push(make_pair(2,"Child"));
+	que.push(make_pair(12,"Blocked"));
+	que.push(make_pair(11,"Boss"));
+	
+
+	while(!que.empty())
+	{
+		pair<int, string> top = que.top();
+		cout << top.first << " , " <<top.second<<"\n"<< endl;
+		que.pop();
+	}
+
+
+	Call call;
+	call.enqueue("Wife", 1);
+	call.enqueue("child", 2);
+	call.enqueue("father", 3);
+	call.enqueue("blocked", 12);
+	call.enqueue("boss", 11);
+	call.printQueueContent();
 	Customer c1;
-	c1.set_nid(23);
-	cout << c1.get_nid() << endl;
 	c1.display_information();
 	list <Phone_Number> myNumber;
-	myNumber.push_back(Phone_Number("0162707553", "Grameemphone"));
+	
+	//c1.myNumber.push_back(Phone_Number("0162707553", "Grameemphone"));
 	myNumber.push_back(Phone_Number("0162707553", "Grameemphone"));
 	myNumber.push_back(Phone_Number("0162707553", "Grameemphone"));
 	myNumber.push_back(Phone_Number("0162707553", "Grameemphone"));

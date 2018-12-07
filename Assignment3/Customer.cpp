@@ -16,13 +16,13 @@ Customer::~Customer()
 {
 
 }
-int Customer::get_nid()
+int Customer::get_customer_id()
 {
-	return nid;
+	return customerID;
 }
-void Customer::set_nid(int nid)
+void Customer::set_customer_id(int customerID)
 {
-	this->nid = nid;
+	this->customerID=customerID;
 }
 void Customer::display_information()
 {

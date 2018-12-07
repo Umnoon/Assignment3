@@ -3,7 +3,7 @@
 using namespace std;
 class Person
 {
-private:
+protected:
 	string personFirstName;
 	string personLastName;
 	string birthDate;
@@ -22,7 +22,7 @@ private:
 	int length;
 public:
 	Person();
-	//~Person();
+	~Person();
 
 	void set_person_first_name(string personFirstName);
 	void set_person_last_name(string personLastName);
